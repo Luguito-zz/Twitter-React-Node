@@ -5,10 +5,10 @@ const config = require('../../config');
 passport.use(new Strategy({
     consumerKey: config.consumerKey,
     consumerSecret:config.consumerSecret,
-    callbackURL: 'http://localhost:8081/',
+    callbackURL: '/oauth/callback',
     userProfileURL: "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true"
 },function(token,tokenSecret,profile,callback){
-    console.log(profile)
+    return callback(null, profile);
 }))
 
 passport.serializeUser(function(user,callback){

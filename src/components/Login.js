@@ -8,7 +8,7 @@ const Login = () => {
 
         <h1>Hola. Clickea para que inicies sesión con Twitter</h1>
 
-        <a href="http://localhost:8080/twitter/login">Iniciar</a> <br/>
+        <a href="http://localhost:8080/oauth/callback">Iniciar</a> <br/>
         </div>
     )
 }

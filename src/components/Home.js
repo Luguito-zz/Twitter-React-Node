@@ -3,25 +3,26 @@ import axios from 'axios';
 import Tweets from './Tweets';
 import TopPanel from './TopPanelSearch';
 import SideProfile from './SideProfile';
-import {Col,Row} from 'react-bootstrap'
+import TrendingTop from './TrendingTop'
+import { Col, Row } from 'react-bootstrap'
 
 const HomePage = () => {
     let [q, setQ] = useState('Colombia');
     let [count, setCount] = useState(10);
-    let [datos,setDatos] = useState([]);
+    let [datos, setDatos] = useState([]);
 
-    useEffect(()=>{
-        axios.post('http://localhost:8080/get_tweets',{
+    useEffect(() => {
+        axios.post('http://localhost:8080/get_tweets', {
             q,
             count
         })
-        .then(data=>{
-            setDatos(data.data.statuses)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-    },[])
+            .then(data => {
+                setDatos(data.data.statuses)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }, [])
 
     console.log(datos)
     return (
@@ -38,20 +39,24 @@ const HomePage = () => {
                     />
                 </Col>
 
-            <Col xs={8}>
-            {
-               datos.map(data =>{
-                   return (
-                   <Tweets
-                    key={data.id}
-                    text={data.text}
-                    screen_name={data.user.screen_name}
-                    user={data.user.name}
-                    day={data.created_at}
-                    />)
-               })
-            }
-            </Col>
+                <Col xs={4}>
+                    {
+                        datos.map(data => {
+                            return (
+                                <Tweets
+                                    key={data.id}
+                                    text={data.text}
+                                    img={data.user.profile_image_url}
+                                    screen_name={data.user.screen_name}
+                                    user={data.user.name}
+                                    day={data.created_at}
+                                />)
+                        })
+                    }
+                </Col>
+                <Col xs={4}>
+                    <TrendingTop/>
+                </Col>
             </Row>
         </div>
     )
