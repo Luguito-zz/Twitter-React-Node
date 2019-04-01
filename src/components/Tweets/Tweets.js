@@ -1,13 +1,18 @@
 import React from 'react'
-import { Card, Container,Col} from 'react-bootstrap'
+import { Card, Container} from 'react-bootstrap'
 import './Tweets.scss'
 
 const Tweets = (props) => {
     return (
         <div key={props.id}>
-            <Container className="m-top-between less-width">
+            <Container className="m-top-between">
                 <Card border="info" className="text-center" >
-                    <Card.Header><img src={props.img} alt="profileImg" className="img-size-border"/> @{props.screen_name}</Card.Header>
+                    <Card.Header>
+                        <img src={props.img} alt="profileImg" className="img-size-border"/>
+                        <div className="m-span">
+                            <span className="m-span">@{props.screen_name}</span> 
+                        </div>
+                        </Card.Header>
                     <Card.Body>
                         <Card.Title className="">{props.user}</Card.Title>
                         <Card.Text>

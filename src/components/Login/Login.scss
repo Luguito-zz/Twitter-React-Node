@@ -1,0 +1,45 @@
+.main-login-size{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background-color: #e3f1fc;
+    background-color: #ababab;
+}
+.b-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: rgb(19, 96, 213) 2px solid;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 60px;
+}
+
+.b-circle:hover{
+    border: rgb(54, 229, 249) 2px solid;
+}
+.arrow-top{
+    position: relative;
+    transform: rotate(30deg);
+    bottom: 80px;
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+
+.arrow-bottom{
+    position: relative;
+    transform: rotate(30deg);
+    top:20px;
+    left: 10px;
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    -webkit-clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}

@@ -1,0 +1,55 @@
+.m-top-letf{
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.box-size{
+    height: 250px;
+    width: 300px;
+}
+
+.fixed-side{
+    position: fixed;
+}
+
+.img-border{
+    width: 80px;
+    height: 80px;
+    border: 3px white solid;
+    border-radius: 50%;
+}   
+
+.img-position{
+   position: relative;
+    top:50px;
+}
+
+.my-username{
+    margin-left: 15px;
+}
+
+.my-screen-name{
+    margin-left: 60px;
+    font-size: 12px;
+}
+.size-button{
+    width: 50%;
+    border-radius: 0px;
+}
+.size-button:hover{
+    background-color: #ffffff;
+    color: black;
+}
+.following{
+    font-size: 10px;
+}
+
+.followers{
+    font-size: 10px;
+    margin-left: 85px;
+}
+
+.body-side-profile{
+    position: relative;
+    bottom: 100px;
+}
