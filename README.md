@@ -1,10 +1,10 @@
-#Aplicacion creada con Webpack, React, Node, Express, Passport, Api Twitter,React Bootstrap.
+# Aplicacion creada con Webpack, React, Node, Express, Passport, Api Twitter,React Bootstrap.
 
-###Para instalar los modulos npm install. 
+### Para instalar los modulos npm install. 
 
-###Para correr los servidores usar el comando npm run start
+### Para correr los servidores usar el comando npm run start
 * * *   * * *   * * *   * * *   *  * 
-######Los puertos de los servidores son: 
+###### Los puertos de los servidores son: 
 * BackEnd = 8080
 * FrontEnd = 8081
 
@@ -22,7 +22,7 @@ En el centro apareceran los ultimos 100 tweets del home del usuario.
 Arriba en la barra podra refrescar los tweets clickeando en "Actualizar Tweets"
 Podrá hacer Logout clickeando en el boton con el mismo nombre
 
-// Endpoints
+# Endpoints
 
 Los endpoints creados y que se pueden usar en la aplicacion son los siguiente:
 
